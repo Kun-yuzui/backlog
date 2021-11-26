@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<p>创建待办</p>
+		<input type="text" name="" id="text" value="aaa" />
+		<button id="btn">新建</button>
+		<ul id="list">
+			<li>买衣服</li>
+		</ul>
+		
+		
+		<script type="text/javascript">
+			let oTxt=document.getElementById("text");
+			let oBtn=document.getElementById("btn");
+			let oUl=document.getElementById("list");
+			
+			oBtn.onclick=function (){
+				let oLi=document.createElement("li");
+				oUl.appendChild(oLi);
+				oLi.innerHTML = oTxt.value;
+				oTxt.value = '';
+			}
+		</script>
+	</body>
+</html>
